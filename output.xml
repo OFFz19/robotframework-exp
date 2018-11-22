@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.0 on darwin)" generated="20181119 16:42:32.900">
+<suite id="s1" name="Bell" source="/Users/aoffy/Desktop/GeekRobot/Exp_Robot/bell.robot">
+<kw name="Open browser facebook" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.facebook.com/</arg>
+<arg>browser=chrome</arg>
+</arguments>
+<msg timestamp="20181119 16:42:33.035" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<status status="PASS" starttime="20181119 16:42:33.034" endtime="20181119 16:42:39.988"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>1280</arg>
+<arg>1024</arg>
+</arguments>
+<status status="PASS" starttime="20181119 16:42:39.988" endtime="20181119 16:42:40.102"></status>
+</kw>
+<status status="PASS" starttime="20181119 16:42:33.034" endtime="20181119 16:42:40.102"></status>
+</kw>
+<test id="s1-t1" name="Facebook">
+<kw name="login with facebook">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>email</arg>
+</arguments>
+<status status="PASS" starttime="20181119 16:42:40.104" endtime="20181119 16:42:40.164"></status>
+</kw>
+<status status="PASS" starttime="20181119 16:42:40.103" endtime="20181119 16:42:40.164"></status>
+</kw>
+<status status="PASS" starttime="20181119 16:42:40.102" endtime="20181119 16:42:40.164" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20181119 16:42:32.903" endtime="20181119 16:42:40.165"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Bell">Bell</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
