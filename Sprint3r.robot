@@ -1,15 +1,18 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library             SeleniumLibrary
 
-*** Variable ***
-${EMAIL}    ${EMPTY}
-${PASSWORD}     ${EMPTY}
-${CHROME_DRIVER_PATH}   /usr/local/bin/chromedriver
+Suite Setup         Open facebook page
+Suite Teardown      Close All Browsers
+
+
 
 *** Test Case ***
 Post Comment On Facebook
-    Open facebook page
     Post Comment
+
+
+
+
 
 *** Keywords ***
 Open facebook page
@@ -28,7 +31,6 @@ Post Comment
     Write Comment
     [Teardown]    Close Browser
 
-
 Sign In With Credential
     Input Text    email    ${EMAIL}
     Input Password    pass    ${PASSWORD}
@@ -41,3 +43,8 @@ Post Model Is Already Popup
 Write Comment
     Press Key       xpath=//*/div[@id="feedx_sprouts_container"]//div[@data-testid="status-attachment-mentions-input"]    Robot Framework
     Click Button    xpath=//*/button[@data-testid="react-composer-post-button"]
+
+*** Variable ***
+${EMAIL}    ${EMPTY}
+${PASSWORD}     ${EMPTY}
+${CHROME_DRIVER_PATH}   /usr/local/bin/chromedriver
